@@ -1,0 +1,6 @@
+div.body {
+  display: flex;
+  justify-content: flex-end;
+  width: 99vw;
+  height: 98vh;
+}
