@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import {faHashtag, faVideo, faCalendar, faUserClock} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: "formulario",
@@ -9,8 +9,10 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
 export class FormularioComponent {
-
-
+  faVideo = faVideo;
+  faHashtag = faHashtag;
+  faCalendar = faCalendar;
+  faUserClock = faUserClock;
 
   constructor() {
     console.log("Componente formulario ha sido cargado")

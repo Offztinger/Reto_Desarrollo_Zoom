@@ -12,7 +12,56 @@ div.body {
 
 div.contenedorFormulario {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1280px;
   height: 98vh;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+div.inputContainer {
+  border: 1px solid black;
+  display: inline-block;
+  width: 400px;
+  margin: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 400px;
+  margin: 30px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+input {
+  width: 340px;
+  height: 60px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+}
+
+/*Tomado de Stackoverflow: https://es.stackoverflow.com/questions/365873/como-quitar-el-icono-del-reloj-en-el-input-type-time*/
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  background: none;
+}
+
+fa-icon {
+  margin: 15px;
+  font-size: 20px;
+}
+
+fa-icon.fa-icon-datetime {
+  margin: 3px;
 }
 
