@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+div.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+div.tarea-container {
+  width: 374px;
+  height: 158px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 7px 0px rgba(197, 197, 197, 0.73);
+  margin: 20px;
+  background-color: #4044c9;
+}
+
+div.tarea-contenido {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+p.tarea-titulo {
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+p.tarea-fecha {
+  color: #fee504;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: lighter;
+}
+
+div.categoria-tarea {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+}
+
+p.tarea-titulo-categoria {
+  display: inline-block;
+  width: 152px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+p.tarea-categoria {
+  display: inline-block;
+  text-align: center;
+  width: 61px;
+  background-color: #f677ad;
+  color: #ffffff;
+  padding: 6px 0;
+  border-radius: 15px;
+  font-size: 13px;
+}

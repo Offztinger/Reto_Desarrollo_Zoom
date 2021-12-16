@@ -27,6 +27,7 @@ form {
 
 div.inputContainer {
   border: 1px solid black;
+  border-radius: 25px;
   display: inline-block;
   width: 400px;
   margin: 30px;
@@ -39,7 +40,6 @@ label {
   font-family: Arial, sans-serif;
   font-size: 20px;
   text-align: center;
-
 }
 
 input {
@@ -49,6 +49,15 @@ input {
   font-size: 20px;
   text-align: center;
   border: none;
+  background: none;
+}
+
+input:focus {
+  border: none !important;
+}
+
+input:active {
+  border: none !important;
 }
 
 /*Tomado de Stackoverflow: https://es.stackoverflow.com/questions/365873/como-quitar-el-icono-del-reloj-en-el-input-type-time*/
@@ -65,15 +74,15 @@ fa-icon.fa-icon-datetime {
   margin: 3px;
 }
 
-div.containerButton{
+div.containerButton {
   display: flex;
   justify-content: center;
-  align-items: center ;
+  align-items: center;
   width: 400px;
 }
 
 button {
-  background-color: #0597F2;
+  background-color: #0597f2;
   border-color: #ffffff;
   border-radius: 7px;
   margin: 10px 0;
@@ -84,6 +93,6 @@ button {
 }
 
 button:hover {
-  border: 1px solid #0597F2;
-  background: #05AFF2;
+  border: 1px solid #0597f2;
+  background: #05aff2;
 }

@@ -1,0 +1,14 @@
+<div class="App">
+  <div *ngFor="let item of eventoModel" class="tarea-container">
+    <div class="tarea-contenido">
+      <div class="detalles-tarea">
+        <p class="tarea-titulo">{{item.nombre_evento}}</p>
+        <p class="tarea-fecha">{{item.fecha_evento}}</p>
+      </div>
+      <div class="categoria-tarea">
+        <p class="tarea-titulo-categoria">ID del Evento:</p>
+        <p class="tarea-categoria">{{item.id_evento}}</p>
+      </div>
+    </div>
+  </div>
+</div>
