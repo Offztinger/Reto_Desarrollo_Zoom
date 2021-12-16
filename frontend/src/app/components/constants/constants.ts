@@ -1,4 +1,53 @@
-const token = "eyJhbGciOiJIUzUxMiIsInYiOiIyLjAiLCJraWQiOiIyYjcwZDUyMi1lZWI4LTQ2NmMtODFmYi0yMjgzZDJkZDI3N2UifQ.eyJ2ZXIiOjcsImF1aWQiOiIyNzA0Y2FhZmI5NmE0YTY1NjM2OWQ0NDAwODY4ZTkxNyIsImNvZGUiOiJSZFpmVUJ1REJ3X0RYeEkzUEJBUXhPd0hoaDExaWxPUHciLCJpc3MiOiJ6bTpjaWQ6ODBiMENZQTdTWENMM0tHNnpiOFJRIiwiZ25vIjowLCJ0eXBlIjowLCJ0aWQiOjAsImF1ZCI6Imh0dHBzOi8vb2F1dGguem9vbS51cyIsInVpZCI6IkRYeEkzUEJBUXhPd0hoaDExaWxPUHciLCJuYmYiOjE2Mzk1OTYwNTAsImV4cCI6MTYzOTU5OTY1MCwiaWF0IjoxNjM5NTk2MDUwLCJhaWQiOiJFcjNFY0l5d1NkcTRveEM2UXBpU0VBIiwianRpIjoiYjVhODM0YmEtYzI2My00ZWMzLTg0MmQtZDIzN2JmZTc1OTFhIn0.vKQfRZpCZOzg3jr_9gDHFMDTcKYk118H7KEeyi1iccqi3NnY80j9Hyj - _CznX1iMIxOdsnbyJYEG85 - vpmvlWw";
-export let header = {headers: {Authorization: `Bearer ${token}`}};
-export const url = "https://api.zoom.us/v2/users/me/meetings"
+const token =
+  'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsImlzcyI6IlZwaHBaakx1UVl1ZUR1VkViT2Z4VnciLCJleHAiOjE2NDAyOTE1MjgsImlhdCI6MTYzOTY4NjcyOX0.TWmGPpJK5ap469DnbBZCmdvrrb2P1sn9hhsz0JkCd-o';
+const APIKey = 'VphpZjLuQYueDuVEbOfxVw';
+const url = 'https://api.zoom.us/v2/users/me/meetings';
 
+export const exampleData = {
+  topic: 'EjemploReu2',
+  type: 2,
+  start_time: '2022-02-28T18:00:10',
+  duration: '45',
+
+  settings: {
+    host_video: true,
+    participant_video: true,
+    join_before_host: true,
+    mute_upon_entry: 'true',
+    watermark: 'false',
+    audio: 'voip',
+    auto_recording: 'cloud',
+  },
+};
+
+export async function getData() {
+  const res = await fetch(url, {
+    method: 'GET',
+
+    mode: 'no-cors',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: '*/*',
+      'Content-Type': 'application/json',
+    },
+    referrerPolicy: 'no-referrer',
+  });
+
+  return res.json();
+}
+
+export async function postData(data = {}) {
+  const res = await fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+      Accept: '*/*',
+    },
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data),
+  });
+
+  return res.json();
+}

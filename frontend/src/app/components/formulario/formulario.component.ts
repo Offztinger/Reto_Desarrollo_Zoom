@@ -7,7 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EventosService } from '../../services/EventosService/EventosService.service';
-import { url, header } from '../constants/constants';
+import { getData, postData, exampleData } from '../constants/constants';
 
 @Component({
   selector: 'formulario',
@@ -28,17 +28,8 @@ export class FormularioComponent implements OnInit {
   //Definicion de header
 
   constructor(public Formulario: FormBuilder, public Services: EventosService) {
-    fetch(url, header)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Data recogida');
-        console.log(data.data);
-        return data.data;
-      })
-      .catch((err) => {
-        console.warn('Ha ocurrido un error desconocido');
-        console.error(err);
-      });
+    getData()
+    //postData(exampleData);
   }
 
   ngOnInit(): void {
