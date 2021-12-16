@@ -54,10 +54,12 @@ input {
 
 input:focus {
   border: none !important;
+  outline: none;
 }
 
 input:active {
   border: none !important;
+  outline: none;
 }
 
 /*Tomado de Stackoverflow: https://es.stackoverflow.com/questions/365873/como-quitar-el-icono-del-reloj-en-el-input-type-time*/
