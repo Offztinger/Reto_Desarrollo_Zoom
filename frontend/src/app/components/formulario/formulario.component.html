@@ -1,18 +1,21 @@
 <div class="contenedorFormulario">
-  <form action="submit">
+  <form novalidate [formGroup]="datosFormulario" (ngSubmit)="saveFormulario()">
     <div class="inputContainer">
       <fa-icon [icon]="faHashtag"></fa-icon>
-      <input id="id_evento" placeholder="Digite el id del evento" type="text">
+      <input id="id_evento" placeholder="Digite el id del evento" formControlName="id_evento" type="text">
     </div>
     <div class="inputContainer">
       <fa-icon [icon]="faVideo"></fa-icon>
-      <input id="nombre_evento" placeholder="Digite el nombre del evento" type="text">
+      <input id="nombre_evento" placeholder="Digite el nombre del evento" formControlName="nombre_evento" type="text">
     </div>
-      <label for="fecha_evento">Digite la fecha y hora del evento:</label>
+    <label for="fecha_evento">Digite la fecha y hora del evento:</label>
     <div class="inputContainer">
       <fa-icon class="fa-icon-datetime" [icon]="faCalendar"></fa-icon>
       <fa-icon class="fa-icon-datetime" [icon]="faUserClock"></fa-icon>
-      <input id="fecha_evento" type="datetime-local">
+      <input id="fecha_evento" formControlName="fecha_evento" type="datetime-local">
+    </div>
+    <div class="containerButton">
+      <button type="submit">Enviar</button>
     </div>
   </form>
 </div>

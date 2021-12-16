@@ -1,19 +1,27 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+//FontAwesome
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-
-import {AppComponent} from './app.component'; //Tras diseñar el componente, debemos importarlo
-import {FormularioComponent} from "./components/formulario/formulario.component";
-import {ListadoComponent} from './components/listado/listado.component';
+//Componentes
+import {AppComponent} from './app.component';
+import {FormularioComponent} from "./components/formulario/formulario.component"; //Tras diseñar el componente, debemos importarlo
 
 @NgModule({
   declarations: [
-    AppComponent, // Declararlo de forma global
-    FormularioComponent, ListadoComponent
+    AppComponent,
+    FormularioComponent,
+    // Declararlo de forma global
   ],
   imports: [
-    BrowserModule, // Modulos de la aplicación
+    // Modulos de la aplicación
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     FontAwesomeModule
+
   ],
   providers: [], // Servicios
   bootstrap: [AppComponent] //Landing page
@@ -21,4 +29,5 @@ import {ListadoComponent} from './components/listado/listado.component';
 
 
 export class AppModule {
+
 }
